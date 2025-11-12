@@ -1,1 +1,76 @@
-  
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-scale=1.0" />
+  <title>Torneo Municipal de Valdivia</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="fondo"></canvas>
+
+  <header>
+    <h1>Torneo Municipal de Valdivia</h1>
+  </header>
+
+  <main>
+    <section id="adminLogin">
+      <h2>Panel de Administración</h2>
+      <input type="password" id="claveAdmin" placeholder="Contraseña" />
+      <button id="btnEntrarAdmin">Entrar</button>
+    </section>
+
+    <section id="panelAdmin" class="oculto">
+      <h2>Registro de Equipos</h2>
+      <input type="text" id="nombreEquipo" placeholder="Nombre del equipo" />
+      <input type="file" id="logoEquipo" accept="image/*" />
+      <button id="btnRegistrar">Registrar Equipo</button>
+
+      <h2>Calendario</h2>
+      <button id="btnGenerar">Generar Partidos</button>
+      <div id="listaPartidos"></div>
+    </section>
+
+    <section id="tabla">
+      <h2>Tabla de Posiciones</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Logo</th>
+            <th>Equipo</th>
+            <th>PJ</th><th>G</th><th>E</th><th>P</th>
+            <th>GF</th><th>GC</th><th>DG</th><th>Pts</th>
+          </tr>
+        </thead>
+        <tbody id="tablaPosiciones"></tbody>
+      </table>
+    </section>
+
+    <section id="gestion">
+      <h2>Gestión del Torneo</h2>
+      <button id="btnExportar">Exportar</button>
+      <input type="file" id="inputImportar" accept=".json" hidden />
+      <button id="btnImportar">Importar</button>
+    </section>
+
+    <!-- Nueva sección sobre Valdivia -->
+    <section id="valdivia">
+      <h2>Valdivia: Tierra de Deporte y Pasión</h2>
+      <p>
+        En el corazón del norte antioqueño, Valdivia se alza como un pueblo lleno de vida, alegría y amor por el deporte.
+        Sus calles y canchas son el reflejo de una comunidad unida, donde cada encuentro deportivo fortalece la amistad,
+        el respeto y el espíritu de superación. ⚽<br><br>
+        Este torneo municipal no solo celebra la competencia, sino también la unión entre barrios, familias y generaciones.
+        Aquí, cada gol es una muestra del esfuerzo y del orgullo de ser valdiviano.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>⚽ Creado por Julián Builes | Sistema de Torneos 2025 ⚽</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
